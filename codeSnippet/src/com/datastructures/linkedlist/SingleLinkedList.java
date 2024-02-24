@@ -52,6 +52,19 @@ public class SingleLinkedList {
     }
 
     public void deleteNodeByIndex(int index) {
+        if (index <= 1) head = head.next;
+
+        int count = 1;
+        Node curr = head;
+
+        while (curr.next != null) {
+            if (count == index - 1) {
+                curr.next = curr.next.next;
+                break;
+            }
+            count++;
+            curr = curr.next;
+        }
     }
 
     public boolean search(int i) {

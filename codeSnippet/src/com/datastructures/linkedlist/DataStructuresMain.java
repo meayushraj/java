@@ -15,9 +15,9 @@ public class DataStructuresMain {
         singleLinkedList.insertAtEnd(4);
         singleLinkedList.insertAtEnd(5);
         singleLinkedList.insertAtBeginning(0);
-        singleLinkedList.deleteNodeByValue(0);
+        singleLinkedList.deleteNodeByValue(101);
 
-        singleLinkedList.deleteNodeByIndex(2);
+        singleLinkedList.deleteNodeByIndex(5);
 
 
 //    singleLinkedList.search(0);
