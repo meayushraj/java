@@ -67,8 +67,20 @@ public class SingleLinkedList {
         }
     }
 
-    public boolean search(int i) {
+    public void search(int element) {
+        boolean isFound = false;
+        int indexCount = 1;
+        Node current = head;
+        while (current.next != null) {
+            if (current.value == element) {
+                isFound = true;
+                break;
+            }
+            current = current.next;
+            indexCount++;
+        }
+        if (isFound) System.out.println("Element " + element + " Found at index " + indexCount);
+        else System.out.println(element + " Not Found");
 
-        return true;
     }
 }
