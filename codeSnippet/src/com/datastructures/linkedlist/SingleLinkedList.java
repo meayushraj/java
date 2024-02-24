@@ -16,11 +16,13 @@ public class SingleLinkedList {
 
   public void insertAtEnd(int i) {
     Node last = head;
-
     while (last.next != null) last = last.next;
-
     last.next = new Node(i);
   }
 
-  public void insertAtBeginning(int i) {}
+  public void insertAtBeginning(int i) {
+    Node new_node = new Node(i);
+    new_node.next = head;
+    head = new_node;
+  }
 }
