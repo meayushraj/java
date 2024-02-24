@@ -15,12 +15,14 @@ public class DataStructuresMain {
         singleLinkedList.insertAtEnd(4);
         singleLinkedList.insertAtEnd(5);
         singleLinkedList.insertAtBeginning(0);
+
         singleLinkedList.deleteNodeByValue(101);
         singleLinkedList.deleteNodeByIndex(5);
+
         singleLinkedList.search(2);
 
-//    singleLinkedList.insertAfter(0);
-//    singleLinkedList.insertAfter(0);
+    singleLinkedList.insertAfterIndex(2);
+//    singleLinkedList.insertAftervalue(0);
         singleLinkedList.printNode();
     }
 }

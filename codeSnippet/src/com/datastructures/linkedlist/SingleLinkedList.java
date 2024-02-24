@@ -26,9 +26,6 @@ public class SingleLinkedList {
         head = new_node;
     }
 
-    public void insertAfter(int i) {
-    }
-
     public void deleteNodeByValue(int value) {
 
         if (head.value == value) {
@@ -82,5 +79,8 @@ public class SingleLinkedList {
         if (isFound) System.out.println("Element " + element + " Found at index " + indexCount);
         else System.out.println(element + " Not Found");
 
+    }
+
+    public void insertAfterIndex(int index) {
     }
 }
