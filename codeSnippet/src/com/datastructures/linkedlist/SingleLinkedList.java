@@ -32,18 +32,14 @@ public class SingleLinkedList {
             head = head.next;
         }
 
-        boolean breakFlag = true;
-        Node prev = head;
-        Node curr = head.next;
+        Node curr = head;
 
+        boolean breakFlag = true;
         while (curr.next != null && breakFlag) {
-            if (curr.value == value) {
-                prev.next = curr.next;
+            if (curr.next.value == value) {
+                curr.next = curr.next.next;
                 breakFlag = false;
-            } else {
-                prev = prev.next;
-                curr = curr.next;
-            }
+            } else curr = curr.next;
 
         }
     }
@@ -81,6 +77,29 @@ public class SingleLinkedList {
 
     }
 
-    public void insertAfterIndex(int index) {
+    public void insertAfterIndex(int index, int element) {
+        Node new_node = new Node(element);
+        if (index <= 1) {
+            new_node.next = head;
+            head = new_node;
+            return;
+        }
+        Node current_node = head;
+        int countIdx = 1;
+
+        while (current_node.next != null) {
+            if (countIdx++ == index - 1) {
+                new_node.next = current_node.next;
+                current_node.next = new_node;
+                break;
+            }
+            current_node = current_node.next;
+        }
+        if (index - 1 == countIdx) {
+            current_node.next = new_node;
+        } else {
+            System.err.println("Error in insertAfterIndex: Given index Exceed by length " + (index - countIdx - 1));
+        }
+
     }
 }
